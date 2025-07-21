@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BADAL - Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #1C1C1C ;
+  color: #DCDCDC  ;
+}
+
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+  background: linear-gradient(to right,#000000, #6c6c6c);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgb(214, 208, 208);
+}
+
+.nav-logo {
+  font-size: 34px;
+  font-weight: 1000;
+  color: #f8f2f2;
+  text-shadow: 3px 3px 6px #000;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  padding: 0;
+}
+
+/* home about skills contact button */
+.nav-links li a {
+  text-decoration: none;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  font-family: sans-serif;
+  font-weight: bold;
+  display: inline-block;
+}
+
+/* Popup effect on hover */
+.nav-links li a:hover {
+  transform: scale(1.1); /* Makes it pop up */
+  background-color: white;
+  color: #333;
+  border-color: #333;
+}
+
+
+.nav-links a {
+  color: #fffefe;
+  text-decoration: none;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #b30000;
+}
+
+/* Hero Section or badal kumar */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 10%;
+  background: linear-gradient(to right,#6c6c6c, #000000);
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  color: #eaeaea;
+}
+
+.hero-text h3 {
+  font-size: 24px;
+  font-weight: 300;
+  color: #999;
+}
+
+.hero-text h4 {
+  font-weight: 300;
+  letter-spacing: 2px;
+  color: #666;
+}
+
+.highlight {
+  color: #f70404;
+  font-weight: 600;
+}
+
+.btn {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #ce0101;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #800000;
+  transform: scale(1.05);
+}
+
+.logo {
+ background-color: #1f1f1f;
+  color: white;
+  width: 220px;
+  padding: 3px;
+  margin: 55px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 6px 300px rgba(255, 255, 255, 0.759);
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 1s ease-out;
+  
+}
+.logo:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 300px rgb(114, 114, 114);
+}
+
+/* About Section */
+.about {
+  padding: 60px 10%;
+  background-color: #888888;
+  text-align: center;
+}
+
+.about h2 {
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.about p {
+  max-width: 700px;
+  margin: auto;
+  font-weight: 300;
+  line-height: 1.6;
+  color: #ffffff;
+}
+
+/* Skills Section */
+.skills {
+  padding: 60px 10%;
+  background-color: #ffffffbf;
+  text-align: center;
+}
+
+.skills h2 {
+  margin-bottom: 30px;
+  color: #eaeaea;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #bdb6b6;
+  color: rgb(0, 0, 0);
+  width: 220px;
+  padding: 25px;
+  margin: 15px;
+  border-radius: 15px;
+  text-align: center;
+
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.925);
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 1s ease-out;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 100px rgb(93, 93, 93);
+}
+
+.icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+  display: block;
+}
+
+/* Contact Section */
+.contact {
+  padding: 60px 10%;
+  background: linear-gradient(to top,#000000, #6c6c6c);
+  text-align: center;
+}
+
+.contact h2 {
+  color: #eaeaea;
+  margin-bottom: 15px;
+}
+
+.contact p {
+  color: #aaa;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+</style>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-logo">CEH</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <h4>Hello, I'm</h4>
+      <h1>Badal Kumar</h1>
+      <h3>A Certified <span class="highlight">Ethical Hacker</span></h3>
+      <a href="#contact"><button class="btn">Say Hello</button></a>
+    </div>
+    <img src="https://images2.alphacoders.com/480/480538.png" class="logo" alt="Logo" />
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <h2>About Me</h2>
+    <p>I am a passionate ethical hacker with interest in cybersecurity, automation, and digital safety. I believe in continuous learning and solving real-world problems with technology.</p>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="skills" id="skills">
+    <h2>My Skills</h2>
+    <div class="cards">
+      <div class="card">
+        <i class="icon">🧠</i>
+        <h3>Dedication</h3>
+        <p>Consistently focused on growth and learning.</p>
+      </div>
+      <div class="card">
+        <i class="icon">⚙</i>
+        <h3>Smart Work</h3>
+        <p>Efficient, results-driven approach to tasks.</p>
+      </div>
+      <div class="card">
+        <i class="icon">🤝</i>
+        <h3>Collaboration</h3>
+        <p>Work well with teams and in solo environments.</p>
+      </div>
+      <div class="card">
+        <i class="icon">💻</i>
+        <h3>Technology</h3>
+        <p>Always exploring new tools & frameworks.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <h2>Contact Me</h2>
+    <p>Feel free to reach out for collaborations, projects, or just to connect!</p>
+    <button class="btn">Email Me</button>
+  </section>
+
+</body>
+</html>
